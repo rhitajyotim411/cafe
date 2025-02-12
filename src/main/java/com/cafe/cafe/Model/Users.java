@@ -1,4 +1,4 @@
-package com.cafe.cafe.Model;
+package com.cafe.cafe.model;
 
 import java.io.Serializable;
 
@@ -25,7 +25,7 @@ public class Users implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Integer id;
+    private Long id;
 
     @Column(name = "name")
     private String name;

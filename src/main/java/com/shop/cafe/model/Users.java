@@ -1,4 +1,4 @@
-package com.cafe.cafe.model;
+package com.shop.cafe.model;
 
 import java.io.Serializable;
 

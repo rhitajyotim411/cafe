@@ -1,4 +1,4 @@
-package com.shop.cafe.config;
+package com.shop.cafe.service;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -38,6 +38,8 @@ public class CustomerUsersDetailsService implements UserDetailsService {
     }
 
     public Users getUserDetails() {
-        return userDetails;
+        Users user = userDetails;
+        user.setPasswd(null);
+        return user;
     }
 }

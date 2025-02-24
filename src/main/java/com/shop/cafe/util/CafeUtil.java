@@ -11,6 +11,7 @@ public class CafeUtil {
     public static final String INVALID_DATA = "Invalid data";
     public static final String REGISTERED_USER = "An user is already registered with this email";
     public static final String REGISTER_SUCCESS = "User successfully registered";
+    public static final String ADMIN_APPRV_WAIT = "Please wait for admin approval to login";
 
     // Random String Generator
     private static final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";

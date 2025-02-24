@@ -8,8 +8,6 @@ import java.util.function.Function;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
-import com.shop.cafe.util.CafeUtil;
-
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -17,7 +15,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 @Service
 public class JwtUtil {
 
-    private String secret = CafeUtil.generateRandomString();
+    private String secret = "HatsuneMiku#01_39";
 
     public String extractUsrnm(String token) {
         return extractClaims(token, Claims::getSubject);

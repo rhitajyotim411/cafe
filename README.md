@@ -10,6 +10,7 @@ This is a full-stack Java project using Spring Boot, Angular, and PostgreSQL. Th
 
 ## Features Implemented
 - **User Signup:** REST API for user registration
+- **Login API:** Secure authentication mechanism
 
 ## Next To Be Implemented
-- **Login API:** Secure authentication mechanism
+- **User Update:** API to update user details

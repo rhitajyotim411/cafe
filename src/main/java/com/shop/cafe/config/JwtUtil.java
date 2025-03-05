@@ -15,14 +15,10 @@ import io.jsonwebtoken.SignatureAlgorithm;
 @Service
 public class JwtUtil {
 
-    private String secret = "HatsuneMiku#01_39";
+    private String secret = "HatsuneMiku#CV01_39";
 
-    public String extractUsrnm(String token) {
-        return extractClaims(token, Claims::getSubject);
-    }
-
-    public Date extractExpiration(String token) {
-        return extractClaims(token, Claims::getExpiration);
+    public Claims extractAllClaims(String token) {
+        return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
     }
 
     public <T> T extractClaims(String token, Function<Claims, T> claimsResolver) {
@@ -30,8 +26,12 @@ public class JwtUtil {
         return claimsResolver.apply(claims);
     }
 
-    public Claims extractAllClaims(String token) {
-        return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
+    public String extractUsrnm(String token) {
+        return extractClaims(token, Claims::getSubject);
+    }
+
+    public Date extractExpiration(String token) {
+        return extractClaims(token, Claims::getExpiration);
     }
 
     private Boolean isTokenExpired(String token) {
